@@ -5,6 +5,9 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = input.value;
   input.value = '';
+
+  const paragraphLength = 500;
+  
   console.log('text');
   
   const ul = document.getElementById('invitedList');
@@ -16,5 +19,7 @@ form.addEventListener('submit', (e) => {
   checkbox.type = 'checkbox';
   label.appendChild(checkbox);
   li.appendChild(label);
-  ul.appendChild(li);
+  for (i = 0; i<paragraphLength; i++) {
+    ul.appendChild(li);
+  }
 });
